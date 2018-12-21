@@ -4,29 +4,16 @@
 
 typedef char pathstring[_MAX_PATH];
 
-int main(int argc, char **argv)
+void transform2mp3(char *inputfilename)
 {
-
-    char *inputfilename, *outputfilename;
-    if (argc < 2)
-    {
-        inputfilename = new pathstring;
-        printf("输入文件名：（限制%d个字符）\n", _MAX_PATH);
-        gets(inputfilename);
-    }
-    else
-    {
-        inputfilename = argv[1];
-    }
-
-    printf("%s\n", inputfilename);
+    char *outputfilename;
 
     if (strlen(inputfilename) == 0)
     {
         printf("错误的文件名\n");
-        return 1;
+        return;
     }
-    else
+
     {
         char drive[_MAX_DRIVE];
         char dir[_MAX_DIR];
@@ -36,7 +23,7 @@ int main(int argc, char **argv)
 
         _splitpath(inputfilename, drive, dir, fname, ext);
         _makepath(outputfilename, drive, dir, fname, ".mp3");
-        printf("输入文件：%s\n输出文件：%s\n", inputfilename, outputfilename);
+        printf("输入：%s\n输出：%s\n", inputfilename, outputfilename);
     }
 
     FILE *ucinput = fopen(inputfilename, "rb"),
@@ -45,10 +32,12 @@ int main(int argc, char **argv)
     if (ucinput == NULL)
     {
         printf("文件%s无法打开", inputfilename);
+        return;
     }
     if (mp3output == NULL)
     {
         printf("文件%s无法打开", outputfilename);
+        return;
     }
 
     int temp;
@@ -59,5 +48,27 @@ int main(int argc, char **argv)
     fclose(ucinput);
     fclose(mp3output);
 
+    printf("%s转换完成\n\n", inputfilename);
+
+    return;
+}
+
+int main(int argc, char **argv)
+{
+    char *inputfilename;
+    if (argc < 2)
+    {
+        inputfilename = new pathstring;
+        printf("输入文件名：（限制%d个字符）\n", _MAX_PATH);
+        gets(inputfilename);
+        transform2mp3(inputfilename);
+    }
+    else
+    {
+        for (int i = 1; i < argc; i++)
+            transform2mp3(argv[i]);
+    }
+
+    system("pause");
     return 0;
 }
