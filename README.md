@@ -18,20 +18,21 @@
 1. https://blog.csdn.net/triagen/article/details/53114772
 2. https://blog.csdn.net/yrwan95/article/details/82194473
 
+### Something New
+
+  An article reported that `.mp3` file (128K only) can be download from
+```url
+http://music.163.com/song/media/outer/url?id=
+```
+So this program makes no sense anymore. :)
+
+
+
 ## Statement: <u>ONLY</u> used for *THEORY RESEARCH & STUDY*, Please <u>SUPPORT THE LEGITIMATE</u>!
 
 ##### That's all. Excuse my poor English.
 
- 
+
 
 [中文自述文件](README.zh-CN.md)
 
-
-
-----
-
->  
->
-> ### 	Proletarier aller Länder, vereinigt euch!
->
->  

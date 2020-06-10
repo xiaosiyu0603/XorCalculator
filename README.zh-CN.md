@@ -17,22 +17,15 @@
 1. https://blog.csdn.net/triagen/article/details/53114772
 2. https://blog.csdn.net/yrwan95/article/details/82194473
 
+### 后续
+
+后来发现在
+```url
+http://music.163.com/song/media/outer/url?id=
+```
+上也也可以下载音频的`.mp3`文件（仅能128K）。所以这个程序也没啥意义了23333。
+
+
+
 ## 声明：本程序<u>仅用于</u>*原理研究和学习*，请<u>支持正版</u>！
 
- 
-
- 
-
- 
-
- 
-
----
-
-  
-
->  
->
-> #### 	全世界的无产者联合起来！
->
->  
